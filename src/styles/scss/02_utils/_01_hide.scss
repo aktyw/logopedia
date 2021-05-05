@@ -1,0 +1,9 @@
+.hide {
+    opacity: 0;
+    pointer-events: none;
+    transition: opacity 1s;
+}
+
+.show {
+    opacity: 1;
+}
