@@ -5,17 +5,25 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="author" content="Arek Tywonek" />
-    <!-- <link rel="stylesheet" type="text/css" href="/styles/css/main.css"> -->
-    <link rel="stylesheet" type="text/css" href="css/main.css">
     <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;700&display=swap" rel="stylesheet">
-    <!-- <link href="styles/css/lightbox.min.css" rel="stylesheet"> -->
-    <link href="css/lightbox.min.css" rel="stylesheet">
-    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
-    
+    <link rel="stylesheet" href="./styles/scss/main.scss">
+    <script type="module" src="./scripts/index.js"  defer></script>
+    <script src="https://kit.fontawesome.com/5078b87c2a.js" crossorigin="anonymous" defer></script>
 </head>
 <body>
-
-    <!-- HEADER & NAV -->
+    <div class="modal-container">
+        <div class="modal">
+            <div class="modal__text">
+                <div class="modal__icon-container">
+                    <?xml version="1.0" ?><svg class="modal__icon" style="enable-background:new 0 0 16 16;" version="1.1" viewBox="0 0 16 16" xml:space="preserve" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"><g id="Guide"/><g id="Layer_2"><g><path d="M8,2C4.69,2,2,4.69,2,8s2.69,6,6,6s6-2.69,6-6S11.31,2,8,2z M8,13c-2.76,0-5-2.24-5-5s2.24-5,5-5s5,2.24,5,5    S10.76,13,8,13z"/><path d="M8,6.85c-0.28,0-0.5,0.22-0.5,0.5v3.4c0,0.28,0.22,0.5,0.5,0.5s0.5-0.22,0.5-0.5v-3.4C8.5,7.08,8.28,6.85,8,6.85z"/><path d="M8.01,4.8C7.75,4.78,7.51,5.05,7.5,5.32c0,0.01,0,0.07,0,0.08c0,0.27,0.21,0.47,0.49,0.48c0,0,0.01,0,0.01,0    c0.27,0,0.49-0.24,0.5-0.5c0-0.01,0-0.11,0-0.11C8.5,4.98,8.29,4.8,8.01,4.8z"/></g></g></svg>
+                </div>
+                <p class="modal__info">Gabinet nieczynny z powodu urlopu macierzyńskiego.</p>
+            </div>
+            <div class="modal__confirm">
+                <button class="modal__button">Rozumiem</button>
+            </div>
+        </div>
+    </div>
     <header class="header">
         <div class="top wrapper">
             <a href="#" class="logo__link"><img src="images/logo.svg" alt="Logo Głoska" class="logo"></img></a>
@@ -44,10 +52,10 @@
         <section class="section__one">
             <div class="wrapper">
                 <a href="tel:737166126" class="btn__mobile"><button class="btn--contact hide"><i class="fas fa-phone-alt btn__icon"></i></button></a>
-                <img src="images/logopedia_main_bg.jpg" alt="Gabinet logopedyczny - dzieci - tło" class="imagebox">
+                <img src="images/logopedia_main_bg.jpg" alt="Gabinet logopedyczny - dzieci w tle" class="imagebox">
                 <div class="textbox__main hide">
-                    <h1 class="maintext__title">Logopeda <span class="span__thi">,</span> Wrocław<span class="spandot--big"></span></h1>
-                    <p class="maintext__subtitle">Profesjonalna poradnia logopedyczna<span class="spandot--small"></span></p>
+                    <h1 class="maintext__title">Logopeda <span class="span__thi">-</span> Wrocław</h1>
+                    <p class="maintext__subtitle">Profesjonalna poradnia logopedyczna</p>
                     <a href="#contact"><button class="btn--primary">Umów się na konsultację</button></a>
                 </div>
                 <div class="scroll-downs hide">
@@ -100,7 +108,7 @@
                     <h2 class="about__title">O mnie<span class="spandot--diff"></span></h2>
                 </div>
                 <div class="about">
-                    <img class="about__image" src="images/logopeda_paulina.jpg" alt="Logopeda - Paulina Dębkowska">
+                    <img class="about__image" src="images/logopeda_paulina.jpg" alt="Logopeda - Paulina Dębkowska - Wrocław Smolec ">
                     <p class="about__subtitle">Witam serdecznie na mojej stronie gabinetu logopedycznego „GŁOSKA”.
                         Nazywam się Paulina Dębkowska, z wykształcenia jestem pedagogiem, logopedą, a od niedawna również neurologopedą.
                         Od wielu lat pracuję z dziećmi w wieku przedszkolnym i szkolnym. Prowadzę także zajęcia dla obcokrajowców.
@@ -116,10 +124,10 @@
                     <h2 class="gallery__title">Galeria<span class="spandot--diff"></span></h2>
                 </div>
                 <div class="gallery">
-                    <a href="images/gabinet_logopedia_01.jpg" class="gallery__box" data-lightbox="gabinet" data-title="Gabinet logopedyczny"><img data-aos="zoom-in"  data-aos-duration="1000" src="images/gabinet_logopedia_01-small.jpg" alt="Gabinet logopedyczny - Głoska" class="gallery__img"></a>
-                    <a href="images/gabinet_logopedia_03.jpg" class="gallery__box" data-lightbox="gabinet" data-title="Gabinet logopedyczny"><img data-aos="zoom-out" data-aos-delay="800" data-aos-duration="1000" src="images/gabinet_logopedia_03-small.jpg" alt="Gabinet logopedyczny - Głoska" class="gallery__img"></a>
-                    <a href="images/gabinet_logopedia_05.jpg" class="gallery__box" data-lightbox="gabinet" data-title="Gabinet logopedyczny"><img data-aos="zoom-in" data-aos-duration="1000" data-aos-delay="1200" src="images/gabinet_logopedia_05-small.jpg" alt="Gabinet logopedyczny - Głoska" class="gallery__img"></a>
-                    <a href="images/gabinet_logopedia_02.jpg" class="gallery__box" data-lightbox="gabinet" data-title="Gabinet logopedyczny"><img data-aos="zoom-out" data-aos-duration="1000" data-aos-delay="400" src="images/gabinet_logopedia_02-small.jpg" alt="Gabinet logopedyczny - Głoska" class="gallery__img"></a>
+                    <a data-fslightbox href="images/gabinet_logopedia_01.jpg" class="gallery__box" data-lightbox="gabinet" data-title="Gabinet logopedyczny"><img data-aos="zoom-in"  data-aos-duration="1000" src="images/gabinet_logopedia_01-small.jpg" alt="Gabinet logopedyczny - Głoska" class="gallery__img"></a>
+                    <a data-fslightbox href="images/gabinet_logopedia_03.jpg" class="gallery__box" data-lightbox="gabinet" data-title="Gabinet logopedyczny"><img data-aos="zoom-out" data-aos-delay="800" data-aos-duration="1000" src="images/gabinet_logopedia_03-small.jpg" alt="Gabinet logopedyczny - Głoska" class="gallery__img"></a>
+                    <a data-fslightbox href="images/gabinet_logopedia_05.jpg" class="gallery__box" data-lightbox="gabinet" data-title="Gabinet logopedyczny"><img data-aos="zoom-in" data-aos-duration="1000" data-aos-delay="1200" src="images/gabinet_logopedia_05-small.jpg" alt="Gabinet logopedyczny - Głoska" class="gallery__img"></a>
+                    <a data-fslightbox href="images/gabinet_logopedia_02.jpg" class="gallery__box" data-lightbox="gabinet" data-title="Gabinet logopedyczny"><img data-aos="zoom-out" data-aos-duration="1000" data-aos-delay="400" src="images/gabinet_logopedia_02-small.jpg" alt="Gabinet logopedyczny - Głoska" class="gallery__img"></a>
                 </div>
             </div>
         </section>
@@ -131,23 +139,23 @@
                 <div class="price">
                     <div class="price__card one">
                         <h3 class="price__subtitle">Diagnoza logopedyczna</h3>
-                        <p class="price__value"><span class="price__value--big">90</span> PLN</p>
-                        <p class="price__time"><i class="far fa-clock price__time-icon"></i>50 minut</p>
+                        <p class="price__value"><span class="price__value--big">140</span> PLN</p>
+                        <p class="price__time"><i class="far fa-clock price__time-icon"></i>50 min</p>
                     </div>
                     <div class="price__card two">
                         <h3 class="price__subtitle">Terapia logopedyczna</h3>
-                        <p class="price__value"><span class="price__value--big">80</span> PLN</p>
-                        <p class="price__time"><i class="far fa-clock price__time-icon"></i>50 minut</p>
+                        <p class="price__value"><span class="price__value--big">100</span> PLN</p>
+                        <p class="price__time"><i class="far fa-clock price__time-icon"></i>50 min</p>
                     </div>
                     <div class="price__card three">
                         <h3 class="price__subtitle">Nauka czytania</h3>
-                        <p class="price__value"><span class="price__value--big">60</span> PLN</p>
-                        <p class="price__time"><i class="far fa-clock price__time-icon"></i>50 minut</p>
+                        <p class="price__value"><span class="price__value--big">70</span> PLN</p>
+                        <p class="price__time"><i class="far fa-clock price__time-icon"></i>50 min</p>
                     </div>
                     <div class="price__card four">
                         <h3 class="price__subtitle">Nauka języka polskiego jako obcego</h3>
-                        <p class="price__value"><span class="price__value--big">50</span> PLN</p>
-                        <p class="price__time"><i class="far fa-clock price__time-icon"></i>50 minut</p>
+                        <p class="price__value"><span class="price__value--big">70</span> PLN</p>
+                        <p class="price__time"><i class="far fa-clock price__time-icon"></i>50 min</p>
                     </div>
                 </div>
             </div>
@@ -180,39 +188,26 @@
             <div class="footer__box">
                 <ul class="footer__nav">
                     <li class="footer__items">
-                            <a href="#" class="footer__item-links">Start</a></li>
+                            <a href="#" class="footer__item-links">start</a></li>
                     <li class="footer__items">
-                            <a href="#services" class="footer__item-links">Oferta</a></li>
+                            <a href="#services" class="footer__item-links">oferta</a></li>
                     <li class="footer__items">
-                            <a href="#about" class="footer__item-links">O mnie</a></li>
+                            <a href="#about" class="footer__item-links">o mnie</a></li>
                     <li class="footer__items">
-                            <a href="#gallery" class="footer__item-links">Galeria</a></li>
+                            <a href="#gallery" class="footer__item-links">galeria</a></li>
                     <li class="footer__items">
-                            <a href="#pricing" class="footer__item-links">Cennik</a></li>
+                            <a href="#pricing" class="footer__item-links">cennik</a></li>
                     <li class="footer__items">
-                            <a href="#contact" class="footer__item-links">Kontakt</a></li>
+                            <a href="#contact" class="footer__item-links">kontakt</a></li>
                 </ul>
                 <div class="footer__contact">
                     <a href="tel:737166126" class="footer__link"><i class="fas fa-phone-alt footer__icon"></i></a>
                     <a href="mailto:gloska.smolec@gmail.com" class="footer__link"><i class="fas fa-envelope footer__icon"></i></a>
-                    <!-- <a href="#" target="_blank" class="footer__link"><i class="fab fa-facebook-f footer__icon"></i></a> -->
                 </div>
             </div>
-            <p class="copyright">Webdesign i wykonanie strony: <a href="mailto:arek.tywonek@gmail.com" class="copyright__author">Arek Tywonek</a> | &#169; 2020 - Gabinet logopedyczny "Głoska"</p>
-            <p class="attributes"><a class="attributes" href='https://www.freepik.com/photos/love'>Love photo created by vanitjan - www.freepik.com</a><a class="attributes" href="https://www.freepik.com/photos/people">People photo created by master1305 - www.freepik.com</a></p>
+            <p class="copyright">Webdesign i wykonanie strony: <a href="mailto:arek.tywonek@gmail.com" class="copyright__author">Arek Tywonek</a> &#169; 2022 - Gabinet logopedyczny "Głoska" - Wrocław - Smolec</p>
+            <!-- <p class="attributes"><a class="attributes" href='https://www.freepik.com/photos/love'>Love photo created by vanitjan - www.freepik.com</a><a class="attributes" href="https://www.freepik.com/photos/people">People photo created by master1305 - www.freepik.com</a></p> -->
         </div>
     </footer>
-    <script src="https://kit.fontawesome.com/5078b87c2a.js" crossorigin="anonymous"></script>
-    <script src="js/all.js"></script>
-    <!-- <script src="/scripts/index.js"></script> -->
-    <!-- <script src="scripts/lightbox-plus-jquery.min.js"></script> -->
-    <script src="js/lightbox-plus-jquery.min.js"></script>
-    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
-    <script>
-        AOS.init({
-            offset: 100,
-            duration: 600
-        });
-    </script>
 </body>
 </html>

@@ -1,0 +1,60 @@
+.btn {
+  font-size: 16px;
+  font-family: 'Open Sans', sans-serif;
+  display: block;
+  height: 50px;
+  width: 230px;
+  border: none;
+  border-radius: 25px;
+  cursor: pointer;
+  transition: transform 0.3s, background-color 0.3s, border-color 0.3s;
+
+  @media (min-width: 768px) {
+    width: 300px;
+    font-size: 20px;
+  }
+}
+
+.btn--primary {
+  @extend .btn;
+  color: $lightC;
+  background-color: $forC;
+  @include hocus {
+    background-color: lighten($forC, 5%);
+  }
+}
+
+.btn--contact {
+  @extend .btn;
+  position: fixed;
+  width: 50px;
+  height: 50px;
+  bottom: 10px;
+  right: 10px;
+  background: $forC;
+  border-radius: 50%;
+  z-index: 10;
+  transition: opacity 1.3s;
+
+  &:hover {
+    background: lighten($forC, 5%);
+  }
+
+  @media (min-width: 1024px) {
+    bottom: 30px;
+    right: 30px;
+    width: 65px;
+    height: 65px;
+  }
+}
+
+.btn__icon {
+  @include fsize(1.5rem);
+  display: inline-block;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: $lightC;
+  transition: opacity 1s;
+}
