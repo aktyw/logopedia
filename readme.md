@@ -1,1 +1,1 @@
-![logopedia](./public/ss-01.png?raw=true)
+![logopedia](./public/ss-02.png?raw=true)
