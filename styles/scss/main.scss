@@ -27,99 +27,6 @@ $hamburger-layer-color: $thiC;
   scroll-margin-top: 30px;
 }
 
-// Temporary MODAL INFO
-
-.modal-container {
-  display: none;
-  position: fixed;
-  background-color: rgba(0, 0, 0, 0.5);
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  z-index: 200;
-}
-
-.modal {
-  position: fixed;
-  display: none;
-  place-items: center;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  width: 300px;
-  background-color: white;
-  border-radius: 10px;
-  z-index: 100;
-  box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
-  animation-name: modalopen;
-  animation-duration: 0.8s;
-
-  &__icon-container {
-    display: flex;
-    justify-content: center;
-  }
-
-  &__icon {
-    width: 55px;
-    padding: 15px 0;
-    fill: $forC;
-  }
-
-  &__text {
-    padding: 20px 40px;
-  }
-
-  &__info {
-    color: $darkC;
-    font-size: 20px;
-    text-align: center;
-  }
-
-  &__confirm {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    width: 100%;
-    height: 100%;
-    background-color: rgb(237, 237, 237);
-    padding: 30px;
-    border-radius: 10px;
-  }
-
-  &__button {
-    width: 140px;
-    height: 45px;
-    background-color: $forC;
-    border: none;
-    border-radius: 25px;
-    color: white;
-    font-size: 18px;
-    cursor: pointer;
-    transition: background-color 0.3s;
-    &:hover {
-      background-color: lighten($forC, 10%);
-    }
-  }
-}
-
-.show-modal {
-  display: block;
-}
-.hide-modal {
-  display: none;
-}
-
-@keyframes modalopen {
-  from {
-    opacity: 0;
-  }
-
-  to {
-    opacity: 1;
-  }
-}
-
 // MOBILE
 .wrapper {
   @include wrapper;
@@ -565,11 +472,10 @@ $hamburger-layer-color: $thiC;
 
 .footer {
   background-color: $fifC;
-  padding-bottom: 30px;
+  padding: 30px 0px;
 
   &__logo {
     z-index: 10;
-    margin-top: 30px;
   }
 
   &__box {
@@ -581,6 +487,7 @@ $hamburger-layer-color: $thiC;
   &__nav {
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
+    text-align: center;
     list-style-type: none;
     width: 100%;
     padding: 10px 0 40px 0;
@@ -630,9 +537,9 @@ $hamburger-layer-color: $thiC;
 
   .copyright {
     text-align: center;
-    font-size: 15px;
+    font-size: 13px;
+    line-height: 1.3;
     color: $lightC;
-    line-height: 1.1rem;
     margin-top: 30px;
 
     &__author {
@@ -965,6 +872,8 @@ $hamburger-layer-color: $thiC;
   // SECTION FIVE - CONTACT 1024px
 
   .contact {
+    padding-bottom: 50px;
+
     &__text {
       @include fsize(1rem);
     }
@@ -986,6 +895,8 @@ $hamburger-layer-color: $thiC;
   // FOOTER 1024px
 
   .footer {
+    padding: 50px 0px;
+
     &__box {
       flex-direction: row;
     }
@@ -1000,7 +911,7 @@ $hamburger-layer-color: $thiC;
       display: flex;
       justify-content: space-between;
       align-items: center;
-      padding: 10px 0 10px 0;
+      padding: 36px 0;
     }
 
     &__item-links {
@@ -1009,6 +920,23 @@ $hamburger-layer-color: $thiC;
 
     &__items {
       margin: 0;
+    }
+
+    .copyright {
+      font-size: 16px;
+      color: $lightC;
+      margin-top: 24px;
+  
+      &__author {
+        font-size: inherit;
+        color: inherit;
+        transition: color 0.3s;
+        text-decoration: underline;
+  
+        &:hover {
+          color: $thiC;
+        }
+      }
     }
   }
 }
