@@ -924,19 +924,6 @@ $hamburger-layer-color: $thiC;
 
     .copyright {
       font-size: 16px;
-      color: $lightC;
-      margin-top: 24px;
-  
-      &__author {
-        font-size: inherit;
-        color: inherit;
-        transition: color 0.3s;
-        text-decoration: underline;
-  
-        &:hover {
-          color: $thiC;
-        }
-      }
     }
   }
 }
